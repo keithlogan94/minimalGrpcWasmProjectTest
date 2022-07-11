@@ -15,6 +15,7 @@ builder.Services.AddGrpc();
 var app = builder.Build();
 
 app.UseGrpcWeb();
+app.UseRouting();
 // Configure the HTTP request pipeline.
 //app.MapGrpcService<GreeterService>();
 app.UseEndpoints(endpoints =>
