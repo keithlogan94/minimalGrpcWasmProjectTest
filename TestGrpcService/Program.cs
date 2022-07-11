@@ -11,11 +11,19 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddGrpc();
+builder.Services.AddCors(o => o.AddPolicy("AllowAll", policy =>
+{
+    policy.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .WithExposedHeaders("Grpc-Status", "Grpc-Message", "Grpc-Encoding", "Grpc-Accept-Encoding");
+}));
 
 var app = builder.Build();
 
 app.UseGrpcWeb();
 app.UseRouting();
+app.UseCors("AllowAll");
 // Configure the HTTP request pipeline.
 //app.MapGrpcService<GreeterService>();
 app.UseEndpoints(endpoints =>
