@@ -12,14 +12,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddGrpc();
 
-builder.Services.AddSingleton(services => 
-{ 
-    var httpClient = new HttpClient(new GrpcWebHandler(GrpcWebMode.GrpcWeb, new HttpClientHandler())); 
-    var baseUri = services.GetRequiredService<NavigationManager>().BaseUri; 
-    var channel = GrpcChannel.ForAddress(baseUri, new GrpcChannelOptions { HttpClient = httpClient }); 
-    return new Greeter.GreeterClient(channel); 
-});
-
 var app = builder.Build();
 
 app.UseGrpcWeb();
