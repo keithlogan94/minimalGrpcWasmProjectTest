@@ -1,4 +1,5 @@
 using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using TestGrpcService;
 
 namespace TestGrpcService.Services;

@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGrpcService", "TestGrpc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBlazorApp", "TestBlazorApp\TestBlazorApp.csproj", "{23A8F30F-7229-4F43-9FCF-990777B26843}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedGrpc", "SharedGrpc\SharedGrpc.csproj", "{B44E3631-EA39-4537-ADC3-9A4D422742A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,5 +16,9 @@ Global
 		{23A8F30F-7229-4F43-9FCF-990777B26843}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8149B1EB-DE30-402A-A28E-D443EAB02210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8149B1EB-DE30-402A-A28E-D443EAB02210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B44E3631-EA39-4537-ADC3-9A4D422742A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B44E3631-EA39-4537-ADC3-9A4D422742A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B44E3631-EA39-4537-ADC3-9A4D422742A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B44E3631-EA39-4537-ADC3-9A4D422742A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
