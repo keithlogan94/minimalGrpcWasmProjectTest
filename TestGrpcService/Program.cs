@@ -21,9 +21,12 @@ builder.Services.AddCors(o => o.AddPolicy("AllowAll", policy =>
 
 var app = builder.Build();
 
-app.UseGrpcWeb();
 app.UseRouting();
 app.UseCors("AllowAll");
+app.UseGrpcWeb();
+
+//app.UseAuthorization();
+
 // Configure the HTTP request pipeline.
 //app.MapGrpcService<GreeterService>();
 app.UseEndpoints(endpoints =>
